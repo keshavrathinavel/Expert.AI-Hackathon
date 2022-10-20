@@ -1,11 +1,9 @@
 import os
 os.environ["EAI_USERNAME"] = 'BL.EN.U4CSE20057@bl.students.amrita.edu'
 os.environ["EAI_PASSWORD"] = 'Hemanth@200204'
-def sentiment(self):
+def sentiment(self, text):
     from expertai.nlapi.cloud.client import ExpertAiClient
     client = ExpertAiClient()
-
-    text = "you are amazing!" 
     language= 'en'
 
     output = client.specific_resource_analysis(
@@ -13,9 +11,9 @@ def sentiment(self):
         params={'language': language, 'resource': 'sentiment'
     })
 
-    print("Output overall sentiment:")
-
-    print(output.sentiment.overall)
+    print("Overall sentiment: " + str(output.sentiment.overall))
+    print("Negativity sentiment: " + str(output.sentiment.negativity))
+    print("Positivity sentiment: " + str(output.sentiment.positivity))
 
 def hatespeech(self):
     print("he;;[")
