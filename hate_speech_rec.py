@@ -1,5 +1,4 @@
 
-import json
 import os
 
 os.environ["EAI_USERNAME"] = 'bl.en.u4cse20074@bl.students.amrita.edu'
@@ -24,7 +23,3 @@ for extraction in output.extractions:
     for field in extraction.fields:
         print("{} = {}".format(field.name, field.value))
     i = i + 1
-
-output = client.specific_resource_analysis(
-    body={"document": {"text": text}}, 
-    params={'language': language, 'resource': 'entities'})
