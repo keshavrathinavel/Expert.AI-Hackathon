@@ -1,11 +1,14 @@
 
+from expertai.nlapi.cloud.client import ExpertAiClient
+client = ExpertAiClient()
+
 def sentiment(self, text):
     import os
     os.environ["EAI_USERNAME"] = 'bl.en.u4cse20074@bl.students.amrita.edu'
     os.environ["EAI_PASSWORD"] = 'dBbuc.3CAfYuvy6'
 
-    from expertai.nlapi.cloud.client import ExpertAiClient
-    client = ExpertAiClient()
+    # from expertai.nlapi.cloud.client import ExpertAiClient
+    # client = ExpertAiClient()
     language= 'en'
 
     output = client.specific_resource_analysis(
@@ -22,8 +25,8 @@ def hatespeech(self, text):
     os.environ["EAI_USERNAME"] = 'bl.en.u4cse20074@bl.students.amrita.edu'
     os.environ["EAI_PASSWORD"] = 'dBbuc.3CAfYuvy6'
 
-    from expertai.nlapi.cloud.client import ExpertAiClient
-    client = ExpertAiClient()
+    # from expertai.nlapi.cloud.client import ExpertAiClient
+    # client = ExpertAiClient()
     # text = "i want to murder children and cut up cats"
     detector = 'hate-speech'
     language= 'en'
