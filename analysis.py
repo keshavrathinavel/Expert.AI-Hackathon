@@ -17,14 +17,14 @@ def sentiment(self, text):
     print("Negativity sentiment: " + str(output.sentiment.negativity))
     print("Positivity sentiment: " + str(output.sentiment.positivity))
 
-def hatespeech(self):
+def hatespeech(self, text):
     import os
     os.environ["EAI_USERNAME"] = 'bl.en.u4cse20074@bl.students.amrita.edu'
     os.environ["EAI_PASSWORD"] = 'dBbuc.3CAfYuvy6'
 
     from expertai.nlapi.cloud.client import ExpertAiClient
     client = ExpertAiClient()
-    text = "i want to murder children and cut up cats"
+    # text = "i want to murder children and cut up cats"
     detector = 'hate-speech'
     language= 'en'
     output = client.detection(body={"document": {"text": text}}, params={'detector': detector, 'language': language})
