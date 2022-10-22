@@ -16,5 +16,6 @@ def behavioural_analysis(text):
     for category in output.categories:
         print(category.id_, category.hierarchy, sep="\t")
 
-text = "Michael Jordan was one of the best basketball players of all time. Scoring was Jordan's stand-out skill, but he still holds a defensive NBA record, with eight steals in a half."
-behavioural_analysis(text)
+# text = "Michael Jordan was one of the best basketball players of all time. Scoring was Jordan's stand-out skill, but he still holds a defensive NBA record, with eight steals in a half."
+# text = "im feeling sad"
+# behavioural_analysis(text)
