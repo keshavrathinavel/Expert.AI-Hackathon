@@ -23,3 +23,4 @@ for extraction in output.extractions:
     for field in extraction.fields:
         print("{} = {}".format(field.name, field.value))
     i = i + 1
+
