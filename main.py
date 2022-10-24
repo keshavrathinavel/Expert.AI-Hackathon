@@ -6,7 +6,7 @@ class start:
         #setting title
         root.title("Evaluation ")
         #setting window size
-        width=995
+        width=1050
         height=550
         screenwidth = root.winfo_screenwidth()
         screenheight = root.winfo_screenheight()
@@ -15,21 +15,21 @@ class start:
         root.resizable(width=False, height=False)
 
         GMessage_992=tk.Message(root)
-        ft = tkFont.Font(family='Times',size=18)
+        ft = tkFont.Font(family='Helvetica',size=18)
         GMessage_992["font"] = ft
         GMessage_992["fg"] = "#333333"
         GMessage_992["justify"] = "center"
-        GMessage_992["text"] = "Welcome to Psychology  Evaluation, please click on START button to start the process"
-        GMessage_992.place(x=110,y=110,width=794,height=78)
+        GMessage_992["text"] = "Click START to begin your Psych Evaluation"
+        GMessage_992.place(x=110,y=50,width=850,height=200)
 
         GButton_441=tk.Button(root)
         GButton_441["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=13)
+        ft = tkFont.Font(family='Helvetica',size=13)
         GButton_441["font"] = ft
         GButton_441["fg"] = "#000000"
         GButton_441["justify"] = "center"
         GButton_441["text"] = "START"
-        GButton_441.place(x=440,y=220,width=114,height=46)
+        GButton_441.place(x=480,y=220,width=114,height=46)
         GButton_441["command"] = self.GButton_441_command
 
     def GButton_441_command(self):
@@ -62,7 +62,7 @@ class question:
 
         GButton_312=tk.Button(root)
         GButton_312["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_312["font"] = ft
         GButton_312["fg"] = "#000000"
         GButton_312["justify"] = "center"
@@ -72,7 +72,7 @@ class question:
 
         GButton_221=tk.Button(root)
         GButton_221["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_221["font"] = ft
         GButton_221["fg"] = "#000000"
         GButton_221["justify"] = "center"
@@ -82,7 +82,7 @@ class question:
 
         GButton_214=tk.Button(root)
         GButton_214["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_214["font"] = ft
         GButton_214["fg"] = "#000000"
         GButton_214["justify"] = "center"
@@ -128,7 +128,7 @@ class question:
 
         GButton_59=tk.Button(root)
         GButton_59["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_59["font"] = ft
         GButton_59["fg"] = "#000000"
         GButton_59["justify"] = "center"
@@ -138,7 +138,7 @@ class question:
 
         GButton_361=tk.Button(root)
         GButton_361["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_361["font"] = ft
         GButton_361["fg"] = "#000000"
         GButton_361["justify"] = "center"
@@ -148,7 +148,7 @@ class question:
 
         GButton_523=tk.Button(root)
         GButton_523["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_523["font"] = ft
         GButton_523["fg"] = "#000000"
         GButton_523["justify"] = "center"
@@ -158,7 +158,7 @@ class question:
 
         GButton_720=tk.Button(root)
         GButton_720["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_720["font"] = ft
         GButton_720["fg"] = "#000000"
         GButton_720["justify"] = "center"
@@ -168,7 +168,7 @@ class question:
 
         GButton_76=tk.Button(root)
         GButton_76["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_76["font"] = ft
         GButton_76["fg"] = "#000000"
         GButton_76["justify"] = "center"
@@ -178,7 +178,7 @@ class question:
 
         GButton_469=tk.Button(root)
         GButton_469["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_469["font"] = ft
         GButton_469["fg"] = "#000000"
         GButton_469["justify"] = "center"
@@ -188,7 +188,7 @@ class question:
 
         GButton_187=tk.Button(root)
         GButton_187["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_187["font"] = ft
         GButton_187["fg"] = "#000000"
         GButton_187["justify"] = "center"
@@ -198,7 +198,7 @@ class question:
 
         GButton_305=tk.Button(root)
         GButton_305["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_305["font"] = ft
         GButton_305["fg"] = "#000000"
         GButton_305["justify"] = "center"
@@ -208,7 +208,7 @@ class question:
 
         GButton_1=tk.Button(root)
         GButton_1["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_1["font"] = ft
         GButton_1["fg"] = "#000000"
         GButton_1["justify"] = "center"
@@ -218,7 +218,7 @@ class question:
 
         GButton_152=tk.Button(root)
         GButton_152["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_152["font"] = ft
         GButton_152["fg"] = "#000000"
         GButton_152["justify"] = "center"
@@ -228,7 +228,7 @@ class question:
 
         GButton_254=tk.Button(root)
         GButton_254["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_254["font"] = ft
         GButton_254["fg"] = "#000000"
         GButton_254["justify"] = "center"
@@ -238,7 +238,7 @@ class question:
 
         GButton_838=tk.Button(root)
         GButton_838["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_838["font"] = ft
         GButton_838["fg"] = "#000000"
         GButton_838["justify"] = "center"
@@ -247,7 +247,7 @@ class question:
         GButton_838["command"] = self.GButton_838_command
 
         GLabel_528=tk.Label(root)
-        ft = tkFont.Font(family='Times',size=13)
+        ft = tkFont.Font(family='Helvetica',size=13)
         GLabel_528["font"] = ft
         GLabel_528["fg"] = "#333333"
         GLabel_528["wraplength"] = 900
@@ -257,7 +257,7 @@ class question:
 
         GButton_867=tk.Button(root)
         GButton_867["bg"] = "#5fb878"
-        ft = tkFont.Font(family='Times',size=10)
+        ft = tkFont.Font(family='Helvetica',size=10)
         GButton_867["font"] = ft
         GButton_867["fg"] = "#000000"
         GButton_867["justify"] = "center"
