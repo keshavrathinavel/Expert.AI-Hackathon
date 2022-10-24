@@ -1,6 +1,6 @@
 import tkinter as tk
 import tkinter.font as tkFont
-
+from audio import *
 class start:
     def __init__(self, root):
         #setting title
@@ -38,12 +38,13 @@ class start:
 
 
 class question:
-    def __init__(self, root):
+
+    def __init__(self, root, question):
         #setting title
-        root.title("undefined")
+        root.title("Evaluation")
         #setting window size
         width=995
-        height=580
+        height=700
         screenwidth = root.winfo_screenwidth()
         screenheight = root.winfo_screenheight()
         alignstr = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2)
@@ -52,11 +53,11 @@ class question:
 
         GLabel_966=tk.Label(root)
         GLabel_966["bg"] = "#1e90ff"
-        ft = tkFont.Font(family='Times',size=16)
+        ft = tkFont.Font(family='Times',size=12)
         GLabel_966["font"] = ft
         GLabel_966["fg"] = "#333333"
         GLabel_966["justify"] = "center"
-        GLabel_966["text"] = "QUESTION 1"
+        GLabel_966["text"] = question[0]
         GLabel_966.place(x=30,y=60,width=910,height=30)
 
         GButton_312=tk.Button(root)
@@ -91,7 +92,7 @@ class question:
 
         GLabel_744=tk.Label(root)
         GLabel_744["bg"] = "#1e9fff"
-        ft = tkFont.Font(family='Times',size=16)
+        ft = tkFont.Font(family='Times',size=12)
         GLabel_744["font"] = ft
         GLabel_744["fg"] = "#333333"
         GLabel_744["justify"] = "center"
@@ -100,7 +101,7 @@ class question:
 
         GLabel_384=tk.Label(root)
         GLabel_384["bg"] = "#1e90ff"
-        ft = tkFont.Font(family='Times',size=16)
+        ft = tkFont.Font(family='Times',size=12)
         GLabel_384["font"] = ft
         GLabel_384["fg"] = "#333333"
         GLabel_384["justify"] = "center"
@@ -109,7 +110,7 @@ class question:
 
         GLabel_903=tk.Label(root)
         GLabel_903["bg"] = "#1e90ff"
-        ft = tkFont.Font(family='Times',size=16)
+        ft = tkFont.Font(family='Times',size=12)
         GLabel_903["font"] = ft
         GLabel_903["fg"] = "#333333"
         GLabel_903["justify"] = "center"
@@ -118,7 +119,7 @@ class question:
 
         GLabel_750=tk.Label(root)
         GLabel_750["bg"] = "#1e90ff"
-        ft = tkFont.Font(family='Times',size=16)
+        ft = tkFont.Font(family='Times',size=12)
         GLabel_750["font"] = ft
         GLabel_750["fg"] = "#333333"
         GLabel_750["justify"] = "center"
@@ -249,9 +250,10 @@ class question:
         ft = tkFont.Font(family='Times',size=13)
         GLabel_528["font"] = ft
         GLabel_528["fg"] = "#333333"
+        GLabel_528["wraplength"] = 900
         GLabel_528["justify"] = "center"
         GLabel_528["text"] = "For each of the question given below, press START button to start recording and once completed press STOP button to end recording of your answer to the question mentioned. Press DELETE button to delete recording and restart recording."
-        GLabel_528.place(x=40,y=10,width=903,height=30)
+        GLabel_528.place(x=40,y=10,width=903,height=40)
 
         GButton_867=tk.Button(root)
         GButton_867["bg"] = "#5fb878"
