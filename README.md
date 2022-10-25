@@ -2,10 +2,16 @@
 
 # Dependency
 
-pip install expertai-nlapi
-pip install SpeechRecognition
-pip install PocketSphinx
-pip install pyaudio
+<!-- Indira Dependency -->
+
+- pip install expertai-nlapi
+- pip install SpeechRecognition
+- pip install PocketSphinx
+- pip install pyaudio
+<!-- Hemu dependency  -->
+- pip install soundfile
+- pip install audio
+- pip install audiosegment
 
 ## Note:
 
