@@ -1,0 +1,7 @@
+expertai-nlapi
+SpeechRecognition
+PocketSphinx
+pyaudio
+soundfile
+audio
+audiosegment
