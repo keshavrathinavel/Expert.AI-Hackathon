@@ -48,7 +48,7 @@ class audio:
         recording= True  
         global file_exists
         #Create a file to save the audio
-        messagebox.showinfo(message="Recording Audio. Speak into the mic")
+        messagebox.showinfo(message="Please start talking after 2 seconds since you press the button")
         with sf.SoundFile(self.file_name, mode='w', samplerate=44100,
                             channels=2) as file:
         #Create an input stream to record audio without a preset time
@@ -68,8 +68,8 @@ class main:
         voice_rec = Tk()
         voice_rec.geometry("360x200")
         voice_rec.title("Voice Recorder")
-        voice_rec.config(bg="#107dc2")
-        title_lbl  = Label(voice_rec, text=" Voice Recorder", bg="#107dc2").grid(row=0, column=0, columnspan=3)
+        voice_rec.config(bg="#ffffff")
+        title_lbl  = Label(voice_rec, text="Press the record button to begin and Stop to end", bg="#ffffff").grid(row=0, column=0, columnspan=3)
 
         #Button to record audio
         record_btn = Button(voice_rec, text="Record Audio", command=lambda m=1:aud.threading_rec(m))
