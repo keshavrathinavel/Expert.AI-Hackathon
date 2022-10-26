@@ -12,34 +12,38 @@ import pandas as pd
 # analysis.behavioural_analysis(text)
 # analysis.hatespeechdetection(text)
 # analysis.sentiment(text)
-question = pd.read_csv(r'C:\\Users\\kesha\\Documents\\GitHub\\"Expert.AI-Hackathon"\\questions.csv')
 
-name = 'Q'
+
+
 for i in range(1, 5):
-    x = name + str(i) + '.wav'
-    text = speech.speech_using_audio_file(x)
+    question = pd.read_csv(r'D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv')
+    print(question.iloc[1,0])
+    name = 'Q'
+    # x = name + str(i) + '.wav'
+    # text = speech.speech_using_audio_file(x)
     text = text.replace(',', '')
     text = str(text)
+    text = "texting"
     question.iloc[i,1] = text
-    # Using Expert.AI, we create sentiment, behaviour and hate-speech analysis
-    analysis.behavioural_analysis(text)
+    # # Using Expert.AI, we create sentiment, behaviour and hate-speech analysis
+    # analysis.behavioural_analysis(text)
 
-    # hate speech analysis
-    hate_speech_analysis = analysis.hatespeechdetection(text)
-    print("\nCategorization: ID Code + Category")
-    for category in hate_speech_analysis.categories:
-        print(category.id_, category.hierarchy, sep="\t")
+    # # hate speech analysis
+    # hate_speech_analysis = analysis.hatespeechdetection(text)
+    # print("\nCategorization: ID Code + Category")
+    # for category in hate_speech_analysis.categories:
+    #     print(category.id_, category.hierarchy, sep="\t")
 
-    print("\nRunning Hate-Speech Detection: ")
-    i = 1
-    for extraction in hate_speech_analysis.extractions:
-        print("Record #{}:".format(i))
-        for field in extraction.fields:
-            print("{} = {}".format(field.name, field.value))
-        i = i + 1
+    # print("\nRunning Hate-Speech Detection: ")
+    # i = 1
+    # for extraction in hate_speech_analysis.extractions:
+    #     print("Record #{}:".format(i))
+    #     for field in extraction.fields:
+    #         print("{} = {}".format(field.name, field.value))
+    #     i = i + 1
     
-    # sentiment analysis
-    analysis.sentiment(text)
+    # # sentiment analysis
+    # analysis.sentiment(text)
 
 
 # Tabulate our results in a CSV and score them according to their immediate need
