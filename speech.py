@@ -1,11 +1,11 @@
-def speech():
-    import speech_recognition as sr
+# def speech():
+#     import speech_recognition as sr
 
-    # obtain audio from the microphone
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Say something!")
-        audio = r.listen(source)
+#     # obtain audio from the microphone
+#     r = sr.Recognizer()
+#     with sr.Microphone() as source:
+#         print("Say something!")
+#         audio = r.listen(source)
 
     # recognize speech using recognize_google
     try:
@@ -23,7 +23,6 @@ def speech_using_audio_file(name):
     from os import path
     file_name = str(name) + ".wav"
     AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), file_name)
-
 
     # use the audio file as the audio source
     r = sr.Recognizer()
