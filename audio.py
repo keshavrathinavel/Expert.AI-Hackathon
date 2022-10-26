@@ -2,7 +2,7 @@ import sounddevice as sd
 import soundfile as sf
 import logging as logger
 import sys
-import audiosegment as AudioSegment
+import pydub as AudioSegment
 import glob
 import os
 
