@@ -8,15 +8,15 @@
 #         audio = r.listen(source)
 
     # recognize speech using recognize_google
-    try:
-        data = r.recognize_google(audio)
-        print("The text of the audio is:" + data)
-    except sr.UnknownValueError:
-        print("Audio was unclear")
-    except sr.RequestError as e:
-        print("API error; {0}".format(e))
+    # try:
+    #     data = r.recognize_google(audio)
+    #     print("The text of the audio is:" + data)
+    # except sr.UnknownValueError:
+    #     print("Audio was unclear")
+    # except sr.RequestError as e:
+    #     print("API error; {0}".format(e))
 
-    return data
+    # return data
 
 def speech_using_audio_file(name):
     import speech_recognition as sr
