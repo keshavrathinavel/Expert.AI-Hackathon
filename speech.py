@@ -16,7 +16,6 @@ def speech():
     except sr.RequestError as e:
         print("API error; {0}".format(e))
 
-
     return data
 
 def speech_using_audio_file(name):
@@ -39,5 +38,5 @@ def speech_using_audio_file(name):
         print("Audio was unclear")
     except sr.RequestError as e:
         print("API error; {0}".format(e))
-speech_using_audio_file("Q1")
+
 
