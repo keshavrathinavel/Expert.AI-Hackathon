@@ -1,6 +1,6 @@
-﻿Questions,Sentiment_overall,Sentiment_pos,Sentiment_neg,Behaviour,Hate_speech
-What positive changes do you want to make in your life?,,,,,
-"Overall, how would you describe your mood?",,,,,
-How connected do you feel to the people around you?,,,,,
-How has your sleep been lately?,,,,,
-"Are you going through something right now? If so, what is it and what is your perspective?",,,,,
+﻿Questions,Answer,Sentiment_overall,Sentiment_pos,Sentiment_neg,Behaviour,Hate_speech
+What positive changes do you want to make in your life?,,,,,,
+"Overall, how would you describe your mood?",,,,,,
+How connected do you feel to the people around you?,,,,,,
+How has your sleep been lately?,,,,,,
+"Are you going through something right now? If so, what is it and what is your perspective?",,,,,,

@@ -3,6 +3,7 @@ import tkinter.font as tkFont
 from audio1 import main
 import analysis
 import speech
+
 # import speech_recognition as sr
 # import sounddevice as sd
 from tkinter import *
@@ -39,7 +40,7 @@ class start:
         GButton_441["command"] = self.GButton_441_command
 
     def GButton_441_command(self):
-        data = pd.read_csv("D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv")
+        data = pd.read_csv(r"C:\Users\kesha\Documents\GitHub\Expert.AI-Hackathon\questions.csv")
         self.GButton_441_command = tk.Toplevel(root)
         self.app = question(self.GButton_441_command, data)
 

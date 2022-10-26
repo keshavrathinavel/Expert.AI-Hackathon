@@ -83,6 +83,3 @@ class main:
         play_btn.grid(row=1,column=2)
         voice_rec.mainloop()
 
-if __name__ == '__main__':
-    name = "Q1.wav"
-    main(name)

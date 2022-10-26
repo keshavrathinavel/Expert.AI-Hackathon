@@ -15,13 +15,12 @@
     #     print("Audio was unclear")
     # except sr.RequestError as e:
     #     print("API error; {0}".format(e))
-
     # return data
 
 def speech_using_audio_file(name):
     import speech_recognition as sr
     from os import path
-    file_name = str(name) + ".wav"
+    file_name = name
     AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), file_name)
 
     # use the audio file as the audio source
@@ -38,4 +37,5 @@ def speech_using_audio_file(name):
     except sr.RequestError as e:
         print("API error; {0}".format(e))
 
+    return data
 
