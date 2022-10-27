@@ -10,7 +10,7 @@ import pandas as pd
 class start:
     def __init__(self, root):
         #setting title
-        root.title("Evaluation ")
+        root.title("START")
         #setting window size
         width=1050
         height=550
