@@ -3,11 +3,8 @@ import tkinter.font as tkFont
 from audio1 import main
 import analysis
 import speech
-import speech_recognition as sr
-import sounddevice as sd
 from tkinter import *
 import pandas as pd
-from tkinter import messagebox
 class start:
     def __init__(self, root):
         #setting title
@@ -20,7 +17,7 @@ class start:
         alignstr = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2)
         root.geometry(alignstr)
         root.resizable(width=False, height=False)
-
+        # Setting buttons and their functions inside tkinter windows
         GMessage_992=tk.Message(root)
         ft = tkFont.Font(family='Helvetica',size=18)
         GMessage_992["font"] = ft
@@ -58,7 +55,7 @@ class question:
         alignstr = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 2)
         root.geometry(alignstr)
         root.resizable(width=False, height=False)
-
+        # Setting buttons and their functions inside tkinter windows
         GLabel_966=tk.Label(root)
         GLabel_966["bg"] = "#1e90ff"
         ft = tkFont.Font(family='Times',size=12)
@@ -174,7 +171,7 @@ class question:
         GButton_867["text"] = "CONTINUE"
         GButton_867.place(x=760,y=530,width=217,height=41)
         GButton_867["command"] = root.destroy
-
+    # Each start button calls the audio recording file to record and save user inputs
     def GButton_312_command(self):
         x = 'Q1.wav'
         main(x)
@@ -211,19 +208,23 @@ if __name__ == "__main__":
     root.mainloop()
     data = pd.read_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv')
     for i in range(1,6):
+        #Q(i).wav are file names where i is 1 to 5
         name = 'Q'
         x = name + str(i) + '.wav'
         text = speech.speech_using_audio_file(x)
         text = text.replace(',', '')
-        # text = "i want to murder children and cut up cats"
+        
+        # Converted text from audio processing is added to dataframe under answer section
         data.iloc[i-1,1] = text
+
+        # Behavioural Analysis
         behavious_output = analysis.behavioural_analysis(text)
         print("Tab separated list of categories:")
         for category in behavious_output.categories:
             print(category.id_, category.hierarchy, sep="\t")
             behaviour = str(data.iloc[i-1,5]) + "---" + str(category.id_) +":"+ str(category.hierarchy)
             data.iloc[i-1,5] = behaviour
-        # hate speech analysis
+        # Hate Speech Analysis
         hate_speech_analysis = analysis.hatespeechdetection(text)
         print("\nCategorization: ID Code + Category")
         for category in hate_speech_analysis.categories:
@@ -241,9 +242,11 @@ if __name__ == "__main__":
                 data.iloc[i-1,7] = hate_detect
             j = j + 1
         
+        # Sentiment Analysis
         sentiment_output = analysis.sentiment(text)
         data.iloc[i-1,2] = sentiment_output.sentiment.overall
         data.iloc[i-1,3] = sentiment_output.sentiment.positivity
         data.iloc[i-1,4] = sentiment_output.sentiment.negativity
     print(data.head())
+    # Saving to CSV file
     # data.to_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv', index=False)

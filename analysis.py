@@ -19,9 +19,6 @@ def behavioural_analysis(text):
     taxonomy = 'behavioral-traits'
     language= 'en'
     output = client.classification(body={"document": {"text": text}}, params={'taxonomy': taxonomy, 'language': language})
-    # print("Tab separated list of categories:")
-    # for category in output.categories:
-    #     print(category.id_, category.hierarchy, sep="\t")
     return output
 
 def sentiment(text):
@@ -35,6 +32,3 @@ def sentiment(text):
     print("Positivity sentiment: " + str(output.sentiment.positivity))
     return output
 
-hatespeechdetection(text)
-behavioural_analysis(text)
-sentiment(text)

@@ -48,7 +48,7 @@ class audio:
         recording= True  
         global file_exists
         #Create a file to save the audio
-        messagebox.showinfo(message="Please start talking after 2 seconds since you press the button")
+        messagebox.showinfo(message="Please start talking after 3 seconds since you press the button")
         with sf.SoundFile(self.file_name, mode='w', samplerate=44100,channels=2) as file:
         #Create an input stream to record audio without a preset time
                 with sd.InputStream(samplerate=44100, channels=2, callback=self.callback):
