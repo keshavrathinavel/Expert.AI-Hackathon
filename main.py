@@ -39,48 +39,6 @@ class start:
         GButton_441.place(x=480,y=220,width=114,height=46)
         GButton_441["command"] = self.GButton_441_command
 
-        entry = tk.Entry(root)
-        entry["bg"] = "#f0f0f0"
-        ft = tkFont.Font(family='Helvetica',size=13)
-        entry["font"] = ft
-        entry["fg"] = "#000000"
-        entry["justify"] = "center"
-        entry["text"] = "Enter the recipient email address"
-        entry.place(x=480,y=250,width=114,height=46)
-        self.email = entry.get()
-
-    def send_mail(self,isTls=True):
-        import smtplib,ssl
-        from email.mime.multipart import MIMEMultipart
-        from email.mime.base import MIMEBase
-        from email.mime.text import MIMEText
-        from email.utils import formatdate
-        from email import encoders
-        send_from = "wall.e.autoresponse@gmail.com"
-        send_to = str(self.email)
-        msg = MIMEMultipart()
-        username='wall.e.autoresponse@gmail.com'
-        password='ggD7BaBV:zA2_6.'
-        msg['From'] = send_from
-        msg['To'] = send_to
-        msg['Date'] = formatdate(localtime = True)
-        text = 'Attached patient evaluation in questions.csv file'
-        msg['Subject'] = 'User ' + 'Evaluation on:' + str(formatdate(localtime = True))
-        msg.attach(MIMEText(text))
-        part = MIMEBase('application', "octet-stream")
-        part.set_payload(open("questions.csv", "rb").read())
-        encoders.encode_base64(part)
-        part.add_header('Content-Disposition', 'attachment; filename="questions.csv"')
-        msg.attach(part)
-        # context = ssl.SSLContext(ssl.PROTOCOL_SSLv3)
-        #SSL connection only working on Python 3+
-        smtp = smtplib.SMTP('smtp.gmail.com', 587)
-        if isTls:
-            smtp.starttls()
-        smtp.login(username,password)
-        smtp.sendmail(send_from, send_to, msg.as_string())
-        smtp.quit()
-
     def GButton_441_command(self):
         data = pd.read_csv("D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv")
         self.GButton_441_command = tk.Toplevel(root)
@@ -252,7 +210,7 @@ if __name__ == "__main__":
     app = start(root)
     root.mainloop()
     data = pd.read_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv')
-    for i in range(1,5):
+    for i in range(1,6):
         name = 'Q'
         x = name + str(i) + '.wav'
         text = speech.speech_using_audio_file(x)
@@ -287,4 +245,5 @@ if __name__ == "__main__":
         data.iloc[i-1,2] = sentiment_output.sentiment.overall
         data.iloc[i-1,3] = sentiment_output.sentiment.positivity
         data.iloc[i-1,4] = sentiment_output.sentiment.negativity
-    data.to_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv', index=False)
+    print(data.head())
+    # data.to_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv', index=False)

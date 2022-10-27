@@ -1,6 +1,6 @@
 Questions,Answer,Sentiment_overall,Sentiment_pos,Sentiment_neg,Behaviour,Hate_speech_id,Hate_speech_detection
-"Overall, how would you describe your mood?",,,,,,,
-How connected do you feel to the people around you?,,,,,,,
-How has your sleep been lately?,,,,,,,
-"Are you going through something right now? If so, what is it and what is your perspective?",,,,,,,
-What positive changes do you want to make in your life?,,,,,,,
+"Overall, how would you describe your mood?",I feel like killing people I really have no interest with talking with anyone I feel like giving up on life I feel like you know cutting up tax cutting of dog feel like really making a message getting bloody my hands and I feel like my emotions right now,-7,0,-7,,nan---3000:['Threat and Violence'],nan---violence:I feel like killing people---target:individual
+How connected do you feel to the people around you?,Shilpi all it was connected with the people around me I have been having thoughts of murdering people especially children and I have been going through a rough patch where people have win committing suicide so Singh all this my mother has been really upset and I haven't been feeling myself lately,-5.8,0,-5.8,"nan---1104:['Sociality', 'Sociality low', 'Emotionality']---1301:['Sociality', 'Sociality high', 'Extroversion']---5101:['Ethics', 'Ethics low', 'Violence']",,
+How has your sleep been lately?,very disturbed sleep lately I've been having nightmares by dreams I had nightmares about people dying and my close friend getting ordered,-16.6,0,-16.6,"nan---3106:['Openness', 'Openness low', 'Negativity']",,
+"Are you going through something right now? If so, what is it and what is your perspective?",break up right now which is affecting my Academics I feel abandoned I feel lonely and I feel like I'm not good enough for anybody,-15.1,0,-15.1,,,
+What positive changes do you want to make in your life?,I want to get better sleep I want to start exercising I want to pay more attention to my health and fitness and nutrition I feel like I am eating a lot of junk food like I would also love to build relationships with the people around,11.39,11.39,0,,,
