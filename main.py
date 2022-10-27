@@ -37,7 +37,7 @@ class start:
         GButton_441["command"] = self.GButton_441_command
 
     def GButton_441_command(self):
-        data = pd.read_csv("D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv")
+        data = pd.read_csv(r"C:\Users\kesha\Documents\GitHub\Expert.AI-Hackathon\questions.csv")
         self.GButton_441_command = tk.Toplevel(root)
         self.app = question(self.GButton_441_command, data)
 
@@ -206,7 +206,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = start(root)
     root.mainloop()
-    data = pd.read_csv('D:\Amrita\AM@hack\Expert.AI-Hackathon\questions.csv')
+    data = pd.read_csv(r'C:\Users\kesha\Documents\GitHub\Expert.AI-Hackathon\questions.csv')
     for i in range(1,6):
         #Q(i).wav are file names where i is 1 to 5
         name = 'Q'
