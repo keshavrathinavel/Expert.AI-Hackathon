@@ -8,7 +8,7 @@ _WALL-E_ is built to reduce the number of steps it takes for one to get help fro
 3. The voice recordings are converted to text using _Google's API for Automatic Speech to Text conversion_. 
 4. The text is then saved in our database, a CSV file that we use to maintain all data regarding the questions, answers, outputs and analysis.
 5. The text is then stripped of commas and passed as the argument to our functions which are - a) Behavior analysis b) Hate-Speech Detection and Analysis c) Sentiment Analysis 
-6. Each of the aforementioned functions uses the Expert.AI's API. Our unique client uses the API for behavior analysis, hate-speech detection and analysis and sentiment analysis to detect patient's current state based on his/her answers.
+6. Each of the aforementioned functions uses the Expert.AI's API. Our unique client uses the API for behavior analysis, hate-speech detection and analysis and sentiment analysis to detect patient's current mental state based on his/her answers.
 7. The outputs that we get from these functions are then saved into the CSV file for easy reference by a psychologist.  
 
 ## How we built it
