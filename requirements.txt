@@ -1,7 +1,9 @@
 expertai-nlapi
 SpeechRecognition
-PocketSphinx
 pyaudio
 soundfile
 audio
+pandas
 audiosegment
+sounddevice
+tkinter
