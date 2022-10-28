@@ -1,3 +1,13 @@
+## Requirements
+Run ```pip install -r requirements.txt``` with cmd open in root directory
+
+## How to run
+1. Run main.py to execute the project.
+2. Ensure your PC microphone is turned on and access is allowed system-wide.
+3. Input your audio answers for every question as per the instructions on-screen.
+4. The questions, respective answers and respective outputs are saved in the CSV file.
+
+
 ## Inspiration
 In India, where the team comes from, there is visible stigma revolving around concepts pertaining to mental health such as illnesses and seeking professional help. This stigma creates self-doubt and reluctance to get necessary treatment. Coupled with the lack of understanding from peers, friends and family, the inability to get access to professional treatment can be detrimental to many.  To curb this, our team has come up with _WALL-E_, taking inspiration from the movie character from the popular cinematic - _WALL-E_, a robot capable of human emotion and breaking free from prejudicial norms much like the people we are targeting with this product.
 
